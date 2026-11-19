@@ -3,7 +3,7 @@
   become: yes
   tasks:
   - name: installing nginx
-    dnf:
+    package:
       name: nginx
       state: present
   - name: starting nginx
