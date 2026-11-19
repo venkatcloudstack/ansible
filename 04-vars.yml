@@ -1,0 +1,12 @@
+- name: demo on variables
+  hosts: frontend
+  become: yes
+  vars:
+    course: "devops"
+    trainer: "gopi"
+    duration: "100 hrs"
+  tasks:
+   - name: print the out put
+     debug:
+      msg: "Hi,iam learning {{ course }},from {{ trainer }},duration is {{ duration }}"
+
