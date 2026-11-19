@@ -8,6 +8,6 @@
       state: present
   - name: starting nginx
     service:
-      name: starting nginx
+      name: nginx
       state: started
       enabled: true
