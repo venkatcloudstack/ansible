@@ -3,10 +3,15 @@
   connection: local
   vars:
     topics: linux, ansible, docker, k8s, terraform
+    topics_list: ['linux', ' ansible', ' docker', ' k8s', ' terraform']
   tasks:
   - name: convert string into list
     debug:
       msg: topics are {{ topics | split (',') }}
+
+  - name: convert list into string
+    debug:
+      msg: topics are {{ topics_list | split (',') }}
 
   - name: set default value
     debug:
