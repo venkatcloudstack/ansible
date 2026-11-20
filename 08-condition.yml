@@ -7,7 +7,7 @@
   - name: print number
     debug:
       msg: "given number is : {{ given_number }} is even"
-    when: given_number is % 2 == 0
+    when: given_number is % 2 = 0
   - name: print number
     debug:
       msg: "given number is : {{ given_number }} is odd"
