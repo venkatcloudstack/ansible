@@ -2,7 +2,7 @@
   hosts: local
   connection: local
   vars:
-    ansible_sessions: 6
+    ansible_sessions: 4
   tasks:
   - name: is ansible is more than 5 sessions
     debug:
