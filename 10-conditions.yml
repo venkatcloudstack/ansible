@@ -5,7 +5,7 @@
   - name: print if redhat
     debug:
       msg: "os_family is redhat"
-    when: ansible_facts.os_family == ""Redhat"
+    when: ansible_facts.os_family == "Redhat"
   - name: print if debian
     debug:
       msg: "os_family is debian"
