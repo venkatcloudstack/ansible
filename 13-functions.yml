@@ -11,7 +11,7 @@
 
   - name: convert list into string
     debug:
-      msg: topics are {{ topics_list | split (',') }}
+      msg: topics are {{ topics_list | join (',') }}
 
   - name: set default value
     debug:
