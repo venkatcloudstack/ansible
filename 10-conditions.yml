@@ -1,0 +1,12 @@
+- name: conditions using ansible_facts
+  hosts: frontend
+  become: yes
+  tasks:
+  - name: print if redhat
+    debug:
+      msg: "os_family is redhat"
+    when: ansible_facts.os_family == "redhat"
+  - name: print if debian
+    debug:
+      msg: "os_family is debian"
+    when: ansible_facts.os_family == "debian"
