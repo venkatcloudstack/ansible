@@ -1,0 +1,12 @@
+- name: insatlling packages
+  hosts: frontend
+  become: yes
+  tasks:
+  - name: insatlling packages
+    package:
+      name: "{{ item }}"
+      state: present
+    loop:
+    - nginx
+    - mysql
+    - mongodb-mongosh
