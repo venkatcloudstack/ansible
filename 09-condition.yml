@@ -1,6 +1,7 @@
 ---
 - name: even or odd
-  hosts: localhost
+  hosts: local
+  connection: local
   vars:
     given_number: 7
   tasks:
