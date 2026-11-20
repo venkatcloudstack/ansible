@@ -1,0 +1,15 @@
+---
+- name: even or odd
+  hosts: localhost
+  vars:
+    given_number: 7
+  tasks:
+    - name: print even number
+      ansible.builtin.debug:
+        msg: "{{ given_number }} is even"
+      when: given_number | int % 2 == 0
+
+    - name: print odd number
+      ansible.builtin.debug:
+        msg: "{{ given_number }} is odd"
+      when: given_number | int % 2 != 0
