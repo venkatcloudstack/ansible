@@ -4,9 +4,9 @@
   tasks:
   - name: insatlling packages
     package:
-      name: "{{ item }}"
-      state: present
+      name: "{{ item.name }}"
+      state: "{{ item.state }}"
     loop:
-    - nginx
-    - mysql
-    - mongodb-mongosh
+    - {name: nginx , state: present}
+    - {name: mysql , state: absent}
+    - {name: git , state: present}
